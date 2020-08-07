@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Rectangle} from 'react-shapes';
+import Footer from './components/Footer'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
+import UndoRedo from './containers/UndoRedo'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  // <div>
+  //   <AddTodo />
+  //   <VisibleTodoList />
+  //   <Footer />
+  //   <UndoRedo />
+  //   <Rectangle width={100} height={100} />
+  // </div>
+  <div>
+    <VisibleTodoList listId="1" />
+    <VisibleTodoList listId="2" />
+    <VisibleTodoList listId="3" />
+  </div>
+  //각 VisibleTodoList container는, listId에 따라 다른 state들을 가짐
+  //따라서, 우리는 getVisibleityFilter, getTodos를 바꿔야함
+)
 
 export default App;
