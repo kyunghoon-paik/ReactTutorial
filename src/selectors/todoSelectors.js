@@ -4,7 +4,7 @@ const getVisibilityFilter = (state, props) =>
     state.todoLists[props.listId].visibleFilter
 
 const getTodos = (state, props) => 
-    state.todoLists[props.listId].todoLists
+    state.todoLists[props.listId].todos
 
 // const getVisibleTodos = createSelector (
 //     [getVisibilityFilter, getTodos],
